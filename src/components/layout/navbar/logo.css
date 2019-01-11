@@ -3,21 +3,23 @@
 }
 .App-icon-plus{
   height: 66px;
-  width: 25px;
-  left: 207.3px;
+  width: 18px;
+  left: 185.3px;
   position: absolute;
 }
 .App-logo-react {
   animation: animate-spin-react infinite 10s linear;
-  height: 60px;
-  left: 135px;
+  height: 63px;
+  width: 52px;
+  left: 140px;
   position: absolute;
 }
 
 .App-logo-redux {
   animation: animate-spin-redux infinite 5s linear;
-  height: 60px;
-  left: 235px;
+  height: 63px;
+  width: 38px;
+  left: 205px;
   position: absolute;
 }
 

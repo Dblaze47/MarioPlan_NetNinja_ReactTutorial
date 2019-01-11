@@ -20,10 +20,11 @@ const Navbar = ()=>{
                 <div className="right">
                     <SignedInLinks />
                     <SignedOutLinks />
-                </div>                
+                </div>             
             </div>
         </nav>
     );
 }
 
 export default Navbar;
+
