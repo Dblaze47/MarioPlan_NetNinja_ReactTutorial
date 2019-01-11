@@ -1,0 +1,25 @@
+.App-logo-redux {
+  animation: animate-spin-redux infinite 5s linear;
+  height: 20vmin;
+}
+.App-logo-react {
+  animation: animate-spin-react infinite 10s linear;
+  height: 20vmin;
+}
+
+@keyframes animate-spin-redux {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes animate-spin-react {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
