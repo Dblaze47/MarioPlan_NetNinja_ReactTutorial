@@ -1,25 +1,39 @@
-.App-logo-redux {
-  animation: animate-spin-redux infinite 5s linear;
-  height: 20vmin;
+.logo-wrapper-div{
+  position: relative;
+}
+.App-icon-plus{
+  height: 66px;
+  width: 25px;
+  left: 207.3px;
+  position: absolute;
 }
 .App-logo-react {
   animation: animate-spin-react infinite 10s linear;
-  height: 20vmin;
+  height: 60px;
+  left: 135px;
+  position: absolute;
 }
 
-@keyframes animate-spin-redux {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
+.App-logo-redux {
+  animation: animate-spin-redux infinite 5s linear;
+  height: 60px;
+  left: 235px;
+  position: absolute;
 }
+
 @keyframes animate-spin-react {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes animate-spin-redux {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
