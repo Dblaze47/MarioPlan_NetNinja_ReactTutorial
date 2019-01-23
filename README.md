@@ -1,6 +1,6 @@
-For skimming through the features, use the following credentials:
-email: admin@react.com
-password: admin1234
+For skimming through the features, use:
+ `email: admin@react.com and password: admin1234`
+<hr />
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
