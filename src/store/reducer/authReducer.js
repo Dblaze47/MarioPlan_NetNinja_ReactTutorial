@@ -16,8 +16,19 @@ export default function authReducer(state = initState, action) {
         authError: null
       };
     case "SIGNOUT_SUCCESS":
-      console.log("Signout successful");
       return state;
+    case "SIGNUP_SUCCESS":
+      console.log("Signup successful.");
+      return {
+        ...state,
+        authError: null
+      };
+    case "SIGNUP_ERROR":
+      console.log("Signup failed.");
+      return {
+        ...state,
+        authError: action.error.message
+      };
     default:
       return state;
   }
