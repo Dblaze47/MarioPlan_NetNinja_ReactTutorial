@@ -16,6 +16,7 @@ class SignIn extends Component {
     });
   };
   render() {
+    const { authError } = this.props;
     return (
       <div className="container">
         <form className="white" onSubmit={this.handleSubmit}>
@@ -30,12 +31,21 @@ class SignIn extends Component {
           </div>
           <div className="input-field">
             <button className="btn red lighten-1 z-depth-0">Login</button>
+            <div className="red-text center">
+              {authError ? <p>{authError}</p> : null}
+            </div>
           </div>
         </form>
       </div>
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    authError: state.auth.authError
+  };
+};
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -44,6 +54,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(SignIn);
