@@ -1,7 +1,3 @@
-Please use these credentials to test login: 
-  email: admin@react.com
-  password: admin1234
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
