@@ -5,7 +5,7 @@ import { compose } from "redux";
 import { Redirect } from "react-router-dom";
 
 const ProjectDetails = props => {
-  const { project, auth } = props;
+  const { project, auth, history } = props;
   if (!auth.uid) {
     return <Redirect to="/signin" />;
   }
@@ -29,7 +29,14 @@ const ProjectDetails = props => {
   } else {
     return (
       <div className="container center">
-        <p>Loading project data...</p>
+        <p id="msg">Loading project data...</p>
+        {setTimeout(function() {
+          document.getElementById("msg").innerHTML =
+            "Project not found. Redirecting to homepage...";
+          setTimeout(function() {
+            history.push("/");
+          }, 3000);
+        }, 4000)}
       </div>
     );
   }
