@@ -10,6 +10,7 @@ class CreateProject extends Component {
   handleSubmit = e => {
     e.preventDefault();
     this.props.createProject(this.state);
+    this.props.history.push("/");
   };
   handleChange = e => {
     this.setState({
@@ -17,7 +18,7 @@ class CreateProject extends Component {
     });
   };
   render() {
-    const { auth } = this.props;
+    const { auth, projectError } = this.props;
     if (!auth.uid) {
       return <Redirect to="/signin" />;
     }
@@ -40,6 +41,9 @@ class CreateProject extends Component {
           <div className="input-field">
             <button className="btn red lighten-1">Create</button>
           </div>
+          <div className="red-text center">
+            {projectError ? <p>{projectError}</p> : null}
+          </div>
         </form>
       </div>
     );
@@ -47,7 +51,8 @@ class CreateProject extends Component {
 }
 const mapStateToProps = state => {
   return {
-    auth: state.firebase.auth
+    auth: state.firebase.auth,
+    projectError: state.project.projectError
   };
 };
 

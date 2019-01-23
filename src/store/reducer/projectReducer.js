@@ -3,7 +3,8 @@ const initState = {
     { id: "1", title: "Help me find peach", content: "blah blah blah" },
     { id: "2", title: "Collect all the start", content: "blah blah blah" },
     { id: "3", title: "Egg hunt with Yoshi", content: "blah blah blah" }
-  ]
+  ],
+  projectError: null
 };
 
 export default function projectReducer(state = initState, action) {
@@ -13,7 +14,10 @@ export default function projectReducer(state = initState, action) {
       return state;
     case "CREATE_PROJECT_ERROR":
       console.log("Project Creation error: " + action.error);
-      break;
+      return {
+        ...state,
+        projectError: action.error.message
+      };
     default:
       return state;
   }
