@@ -4,6 +4,7 @@ import { firestoreConnect } from "react-redux-firebase";
 import { compose } from "redux";
 import { Redirect } from "react-router-dom";
 import { deleteProject } from "../../store/actions/projectActions";
+import moment from "moment";
 
 class ProjectDetails extends Component {
   handleDelete = history => {
@@ -38,7 +39,7 @@ class ProjectDetails extends Component {
                 </button>
               </div>
 
-              <div>11th January, 3:20pm</div>
+              <div>{moment(project.createdAt.toDate()).calendar()}</div>
             </div>
           </div>
         </div>
